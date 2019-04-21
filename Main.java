@@ -7,11 +7,12 @@ public class Main{
 
   public static void main(String[] args) throws FileNotFoundException{
 
-    reader.viewRest(reader.readRest());
+    System.out.print("CSV to read: ");
+    Scanner stdin = new Scanner(System.in);
+    String filename = stdin.next();
+
     System.out.println();
-    reader.viewIris(reader.readIris());
-    System.out.println();
-    reader.viewWeather(reader.readWeather());
+    reader.view(reader.read(filename));
     System.out.println();
   }
 }
