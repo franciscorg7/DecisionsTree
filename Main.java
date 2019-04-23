@@ -4,6 +4,7 @@ import java.io.*;
 public class Main{
 
   public static CSVReader reader = new CSVReader();
+  public static Tree tree = new Tree();
 
   public static void main(String[] args) throws FileNotFoundException{
 
@@ -14,5 +15,6 @@ public class Main{
     System.out.println();
     reader.view(reader.read(filename));
     System.out.println();
+    System.out.println(tree.entropy(reader.read(filename), "Pat"));
   }
 }
