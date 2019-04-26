@@ -29,6 +29,16 @@ public class Main{
 
     String[] array = tree.difValsArray(data, tree.varLocation(data, "Pat"));
 
+    System.out.println("Num dif: " + tree.difVals(data, "Temp"));
+
+    System.out.println("Col: " + tree.goalCol(data));
+
+    System.out.println("Initial entropy: " + tree.initialEntropy(data));
+
+    System.out.println("Target: " + tree.checkMax(data, gain));
+
+    String[] array = tree.difValsArray(data, tree.varLocation(data, "Temp"));
+
     System.out.print("Values: ");
 
     for(int i=0; i < array.length; i++){
